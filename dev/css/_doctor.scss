@@ -1,0 +1,165 @@
+$font_text: 'Ubuntu';
+
+.doctor {
+  background: #F8F8F8;
+  margin-top: -60px;
+  padding-bottom: 119px;
+
+  .icons {
+    margin-bottom: 91px;
+  }
+
+  .item {
+    background: #07569C;
+    box-shadow: 0 12px 40px rgba(7, 86, 156, 0.22);
+    display: flex;
+    align-items: center;
+    height: 119px;
+    padding: 0 31px;
+
+    p {
+      font-family: $font_text;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 23px;
+      color: #FFFFFF;
+      margin-left: 28px;
+      margin-bottom: 0;
+      max-width: 250px;
+    }
+  }
+
+  .middle {
+    background: #1A6AB0;
+  }
+
+  .men-first {
+    max-width: 42px;
+    max-height: 54px;
+  }
+
+  .chair {
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  .men-second {
+    max-width: 41px;
+    max-height: 49px;
+  }
+
+  .caption {
+    font-family: $font_text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #00182E;
+    margin-bottom: 102px;
+    position: relative;
+
+    span {
+      color: #07569C;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -43px;
+      left: 0;
+      width: 42px;
+      height: 14px;
+      background: #07569C;
+    }
+  }
+
+  p {
+    font-family: $font_text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+  }
+
+  .video {
+    position: relative;
+    box-shadow: 0px 12px 40px rgba(7, 86, 156, 0.22);
+  }
+
+  .circle {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: rgba(48, 48, 48, 0.68);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc( 50% - 46px);
+    left: calc( 50% - 46px);
+    cursor: pointer;
+  }
+
+  .fa-play {
+    font-size: 48px;
+    color: #FFFFFF;
+  }
+
+  //media
+
+  @media (max-width: 991px) {
+    padding: 80px 0;
+    margin-top: 0;
+
+    .icons {
+      margin-bottom: 40px;
+    }
+
+    .item {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .caption {
+      margin-top: 0;
+      text-align: center;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+
+    .caption {
+      font-size: 30px;
+      margin-bottom: 50px;
+      line-height: 30px;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 5px;
+        bottom: -15px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .caption {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+$font_text: 'Ubuntu', sans-serif;
+
+.office {
+  background: #F8F8F8;
+  padding: 91px 0 102px 0;
+
+  .caption {
+    font-family: $font_text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #07569C;
+    margin-bottom: 100px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -43px;
+      left: 0;
+      width: 42px;
+      height: 14px;
+      background: #07569C;
+    }
+  }
+
+  .image {
+    box-shadow: 0 12px 40px rgba(7, 86, 156, 0.22);
+  }
+
+  .big {
+    margin-right: 30px ;
+  }
+
+  //.indent {
+  //  margin-bottom: 28px;
+  //}
+
+  //media
+
+  @media (max-width: 991px) {
+    padding: 80px 0;
+
+    .indent {
+      margin-bottom: 30px;
+    }
+
+    .caption {
+      margin-top: 0;
+      text-align: center;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+
+    .caption {
+      font-size: 30px;
+      margin-bottom: 50px;
+      line-height: 30px;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 5px;
+        bottom: -15px;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .indent {
+      flex-direction: column;
+    }
+
+    .big {
+      margin: 0;
+      margin-bottom: 30px;
+    }
+
+    .first {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .caption {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+}

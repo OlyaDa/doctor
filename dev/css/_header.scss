@@ -1,0 +1,268 @@
+$font_text: 'Ubuntu';
+
+.header {
+  background-color: transparent;
+  padding: 26px 0 0 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 2;
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    max-width: 208px;
+    max-height: 158px;
+  }
+
+  .menu {
+    display: flex;
+    margin-bottom: 26px;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      width: 700px;
+      height: 2px;
+      content: "";
+      bottom: -26px;
+      right: 0;
+      background: linear-gradient(to left, #d7e0e8, #fdfefe);
+    }
+  }
+
+  .phones {
+    margin-top: 24px;
+    margin-bottom: 10px;
+
+    a {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      color: #07569C !important;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .phone {
+    margin-right: 36px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+  }
+
+  .menu a {
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #101C27;
+    margin-left: 47px;
+  }
+
+  .menu a:hover {
+    //font-weight: bold;
+    color: #108FFF;
+    text-decoration: none;
+    //transition: .3s;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-mobile {
+    display: none;
+  }
+
+  .clear {
+    width: 270px;
+  }
+
+  // c крестиком
+
+  .toggle-menu {
+    position: relative;
+    width: 35px;
+    height: 12px;
+    cursor: pointer;
+    display: none;
+
+    span {
+      position: absolute;
+      background-color: #1D1D1D;
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      right: 0;
+      margin-top: 0;
+      opacity: 1;
+      &:before {
+        position: absolute;
+        background: #1D1D1D;
+        width: 35px;
+        height: 2px;
+        bottom: 5px;
+        content: "";
+        display: block;
+      }
+      &:after {
+        position: absolute;
+        background: #1D1D1D;
+        width: 35px;
+        height: 2px;
+        top: 5px;
+        content: "";
+        display: block;
+      }
+    }
+  }
+
+  .toggle-menu.menu-on {
+    span {
+      background-color: transparent;
+      transition: all .3s ease-in-out;
+      &:before {
+        background-color: #1D1D1D;
+        transform: rotate(-45deg);
+        top: 0;
+        position: absolute;
+        transition: all .3s ease-in-out;
+      }
+      &:after {
+        background-color: #1D1D1D;
+        transform: rotate(45deg);
+        top: 0;
+        position: absolute;
+        transition: all .3s ease-in-out;
+      }
+    }
+
+  }
+
+  .change-img {
+    .logo-desk {
+      display: none;
+    }
+    .logo-mobile {
+      display: block;
+    }
+  }
+
+  ///media
+
+  @media (max-width: 1080px) {
+    .clear {
+      width: 140px;
+    }
+  }
+
+  @media (max-width: 991px) {
+
+    .header__inner {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: inherit;
+    }
+
+    .main-nav {
+      display: none;
+      padding-top: 14px;
+    }
+
+    .menu li {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .main-nav.open {
+      display: block;
+      background: rgba(255, 255, 255, 0.86);
+    }
+    .phones {
+      margin-top: 24px;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .phone {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .menu {
+      display: block;
+      text-align: center;
+      &:after {
+        display: none;
+      }
+    }
+
+    .menu a {
+      margin-bottom: 18px;
+      margin-left: 0;
+    }
+
+    .toggle-menu {
+      display: block;
+      width: 35px;
+      height: 25px;
+
+      span {
+        &:before {
+          bottom: 10px;
+        }
+        &:after {
+          top: 10px;
+        }
+      }
+    }
+    .logo {
+      max-width: 125px;
+    }
+
+  }
+
+  @media (max-width: 585px) {
+    padding: 5px 0 0 0;
+  }
+
+  //@media (max-width: 625px) {
+  //  .address p {
+  //    display: flex;
+  //  }
+  //
+  //}
+  //
+  //@media (max-width: 460px) {
+  //  .logo {
+  //    max-width: 80px;
+  //    max-height: 30px;
+  //  }
+  //  .address p {
+  //    font-size: 12px;
+  //    margin: 0 0 0 10px;
+  //  }
+  //
+  //  .phone {
+  //    margin-left: 10px;
+  //    font-size: 13px;
+  //  }
+  //}
+
+}

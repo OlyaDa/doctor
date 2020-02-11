@@ -1,0 +1,165 @@
+$font_text: 'Ubuntu';
+
+.banner {
+  position: relative;
+  min-height: calc(100vh - 185px);
+  background: url("../../public/images/bg-banner.png") #FFFFFF top right no-repeat;
+  background-size: auto 100%;
+  padding-top: 185px;
+
+  .banner-inner {
+    min-height: calc(100vh - 185px);
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-evenly;
+  }
+
+  .caption {
+    font-family: $font_text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 64px;
+    color: #07569C;
+    max-width: 518px;
+    margin-bottom: 27px;
+  }
+
+  .sub-caption {
+    font-family: $font_text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    color: #07569C;
+    margin-top: 50px;
+  }
+
+  .button {
+    background: #108FFF;
+    box-shadow: 0 12px 40px rgba(7, 86, 156, 0.22);
+    border-radius: 30px;
+    display: inline-block;
+    width: 333px;
+    margin-bottom: 112px;
+    outline: none !important;
+    border: 2px solid #108FFF;
+
+    .btn {
+      font-family: $font_text;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      padding: 16px 29px;
+      color: #FFFFFF;
+      outline: none !important;
+    }
+
+    &:hover {
+      background: #fff;
+      .btn {
+        color: #108FFF;
+      }
+    }
+  }
+
+
+  //media
+
+  @media (max-width: 1592px) {
+    background-position: 240px 0;
+  }
+
+  @media (max-width: 1400px) {
+    background-position: 24px 0;
+  }
+
+  @media (max-width: 1200px) {
+    background-position: -84px 0;
+  }
+
+  @media (max-width: 991px) {
+    background-position: 200px 0;
+    min-height: calc(100vh - 122px);
+    padding-top: 122px;
+
+    .banner-inner {
+      min-height: calc(100vh - 122px);
+    }
+
+    .caption {
+      font-size: 49px;
+      line-height: 48px;
+    }
+
+    .sub-caption {
+      margin-top: 28px;
+    }
+  }
+
+  @media (max-width: 920px) {
+    background-position: 91px 0;
+  }
+
+  @media (max-width: 817px) {
+    background-position: -57px 0;
+    .caption {
+      font-size: 42px;
+      line-height: 48px;
+    }
+
+    .button {
+      width: 304px;
+
+      .btn {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 660px) {
+    background-position: -230px 0;
+    .caption {
+      font-size: 42px;
+    }
+  }
+
+  @media (max-width: 585px) {
+    background-position: -315px 0;
+  }
+
+  @media (max-width: 470px) {
+    background-position: -370px 0;
+    .caption {
+      font-size: 38px;
+    }
+    .sub-caption {
+      font-size: 27px;
+    }
+  }
+
+  @media (max-width: 470px) {
+    background-position: -436px 0;
+
+    .button {
+      width: 290px;
+      margin: auto;
+      .btn {
+        padding: 16px 22px;
+      }
+    }
+
+  }
+
+  @media (max-width: 370px) {
+    background-position: -492px 0;
+    .caption {
+      font-size: 32px;
+      line-height: 37px;
+    }
+
+  }
+
+}

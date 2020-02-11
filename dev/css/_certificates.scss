@@ -1,0 +1,154 @@
+$font_text: 'Ubuntu', sans-serif;
+
+.certificates {
+  background: #fff;
+  padding: 91px 0 100px 0;
+
+  .caption {
+    font-family: $font_text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #07569C;
+    margin-bottom: 69px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -43px;
+      left: 0;
+      width: 42px;
+      height: 14px;
+      background: #07569C;
+    }
+  }
+
+  .gallery-image {
+    box-shadow: 0 12px 20px rgba(7, 86, 156, 0.22);
+    margin: 40px 20px;
+  }
+
+
+  ///slick-prev slick-next
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 1px;
+  }
+
+  .slick-prev.slick-arrow {
+    right: 60px !important;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-prev, .slick-next {
+    top: 108%;
+    font-size: 16px;
+    line-height: 0;
+    position: absolute;
+    display: block;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: #00386A;
+    border: 1px solid #00386A;
+    outline: none;
+    background: #fff;
+    z-index: 1;
+  }
+
+  .slick-prev:active, .slick-next:active {
+    color: #fff;
+    border: 1px solid #00386A;
+    background: #00386A;
+  }
+  ///slick-prev slick-next end
+
+  //slider dots begin
+
+  .slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    right: 0;
+  }
+
+
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 10px 0 10px;
+    border: 1px #00386A solid;
+    border-radius: 50%;
+  }
+
+  .slick-dots li.slick-active {
+    position: relative;
+    display: inline-block;
+    border: 1px #00386A solid;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-color: #00386A;
+    border-radius: 50%;
+  }
+
+  .slick-dots li button:before {
+    content: "";
+  }
+
+  //slider dots end
+
+  //media
+
+  @media (max-width: 991px) {
+    padding: 80px 0;
+
+    .caption {
+      margin-top: 0;
+      text-align: center;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+
+    .caption {
+      font-size: 30px;
+      margin-bottom: 20px;
+      line-height: 30px;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 5px;
+        bottom: -15px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .caption {
+      font-size: 28px;
+    }
+  }
+}

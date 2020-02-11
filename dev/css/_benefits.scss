@@ -1,0 +1,144 @@
+$font_text: 'Ubuntu', sans-serif;
+
+.benefits {
+  padding: 91px 0 112px 0;
+  background: #FFFFFF;
+
+  .caption {
+    font-family: $font_text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    text-transform: uppercase;
+    color: #00182E;
+    margin-bottom: 100px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -43px;
+      left: 0;
+      width: 42px;
+      height: 14px;
+      background: #07569C;
+    }
+  }
+
+  .items {
+    margin-bottom: 36px;
+  }
+
+  .item {
+    display: flex;
+  }
+
+  .image-check {
+    margin-right: 39px;
+  }
+
+  p {
+    font-family: $font_text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #00386A;
+    max-width: 200px;
+  }
+
+  .image {
+    box-shadow: 0px 12px 40px rgba(7, 86, 156, 0.22);
+    margin-bottom: 27px;
+  }
+
+  .button {
+    background: #108FFF;
+    box-shadow: 0 12px 40px rgba(7, 86, 156, 0.22);
+    border-radius: 30px;
+    display: inline-block;
+    width: 333px;
+    margin-bottom: 112px;
+    outline: none !important;
+    border: 2px solid #108FFF;
+
+    .btn {
+      font-family: $font_text;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 21px;
+      text-transform: uppercase;
+      padding: 16px 68px;
+      color: #FFFFFF;
+      outline: none !important;
+    }
+
+    &:hover {
+      background: #fff;
+      .btn {
+        color: #108FFF;
+      }
+    }
+  }
+
+  //media
+
+  @media (max-width: 1150px) {
+    .image-check {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 80px 0;
+
+    .caption {
+      margin-top: 0;
+      text-align: center;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    }
+
+    .item {
+      margin-bottom: 20px;
+    }
+
+    .button {
+      margin: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+
+    .caption {
+      font-size: 30px;
+      margin-bottom: 50px;
+      line-height: 30px;
+      &:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 5px;
+        bottom: -15px;
+      }
+    }
+
+    .button {
+      display: flex;
+      width: 285px;
+      margin: auto;
+
+      .btn {
+        padding: 16px 44px;
+      }
+    }
+
+  }
+
+}
